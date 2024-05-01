@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="">
+    <xsd:element name="response">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="row">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" name="row">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element minOccurs="0" name="brth_yr" type="xsd:int"/>
+                                        <xsd:element minOccurs="0" name="gndr" type="xsd:normalizedString"/>
+                                        <xsd:element minOccurs="0" name="ethcty" type="xsd:normalizedString"/>
+                                        <xsd:element minOccurs="0" name="nm" type="xsd:normalizedString"/>
+                                        <xsd:element minOccurs="0" name="cnt" type="xsd:int"/>
+                                        <xsd:element minOccurs="0" name="rnk" type="xsd:int"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="_id" type="xsd:normalizedString" use="required"/>
+                                    <xsd:attribute name="_uuid" type="xsd:normalizedString" use="required"/>
+                                    <xsd:attribute name="_position" type="xsd:int" use="required"/>
+                                    <xsd:attribute name="_address" type="xsd:anyURI" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
